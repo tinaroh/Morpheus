@@ -5,10 +5,10 @@ class HomeController < ApplicationController
   end
 
   def about
-    
+
   end
 
-  def find_phase 
+  def result 
 
   end
 
