@@ -12,6 +12,7 @@ class HomeController < ApplicationController
     end
 
     # Trim unused parameters
+    
   end
 
 end
