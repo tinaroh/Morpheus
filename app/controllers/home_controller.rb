@@ -1,20 +1,28 @@
 class HomeController < ApplicationController
 
-  def result 
-    # Array of sleep time and length pairs.
-    @sleep_times = []
+  def calculate
+    # Trim unused parameters.
+    new_params = {
+      :action => :result,
+      :amt => params["#{params[:type]}_amt"],
+      :hr => params[:hr],
+      :m => params[:m],
+      :mr => params[:mr],
+      :type => params[:type]
+    }
 
-    if params[:type] == "core"
-      @status = "core"
-    elsif params[:type] == "daily"
-      @status = "daily"
-    elsif params[:type] == "nap"
-      @status = "nap"
-    else
+    redirect_to new_params
+  end
+
+  def result 
+    phase_params = Param.new(params)
+    if not phase_params.valid?
       @error = true
+      return
     end
 
-    # Trim unused parameters.
+    # Array of sleep time and length pairs.
+    @sleep_times = []
 
   end
 
