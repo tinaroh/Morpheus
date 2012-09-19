@@ -1,0 +1,10 @@
+<% if @error %>
+  <h3 class="sub_header">Oops.</h3>
+  <p class="sub_text">
+    Something went wrong. <%= link_to "Please try again.", "index" %>
+  </p>
+<% else %>
+
+  <%= @status %>
+
+<% end %>

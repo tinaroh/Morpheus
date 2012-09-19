@@ -1,42 +1,53 @@
 <%= form_tag("/result", :method => "get") do %>
   <p class="lead">I want to sleep at</p>
-
-  <select id="select_hour" class="span1">
-    <% for i in 1..12 %>
-      <option><%= i %></option>
-    <% end %>
-  </select>
+  <%= select_tag(:hour, options_for_select((1..12)), :class => "span1") %>
 
   <span class="lead">:</span>
 
-  <select id="select_minute" class="span1">
-    <% for i in "01".."59" %>
-      <option><%= i %></option>
-    <% end %>
-  </select>
+  <%= select_tag(:minute, options_for_select(("01".."59")), :class => "span1") %>
 
-  <select id="select_meridiem" class="span1">
+  <select id="select_meridiem" name="mr" class="span1">
     <option>AM</option>
     <option>PM</option>
   </select>
 
   <p class="lead">with</p>
 
-  <p id="selector">Select by: Core Hours - Total Daily Hours - # of Naps
-  <i class="icon-question-sign icon-white"></i>
-  </p>
+  <div id="submit_select" class="lead">
+    <div id="core" class="submit_box">
+      <%= select_tag(:core_amt, options_for_select((0..7).to_a.concat([">8"])), :class => "span1") %>
+      <span class="space"></span>
+      hours at night.
+      <div class="submit_button_box">
+        <button type="submit" name="type" value="core" class="btn btn-large">Calculate</button>
+      </div>
+    </div>
 
-  <p>
-    <select class="span1">
-      <% for i in 1..24 %>
-        <option><%= i %></option>
-      <% end %>
-    </select>
+    <div id="daily" class="submit_box">
+      <%= select_tag(:daily_amt, options_for_select((2..7).to_a.concat([">8"])), :class => "span1") %>
+      <span class="space"></span>
+      hours daily total.
+      <div class="submit_button_box">
+        <button type="submit" name="type" value="daily" class="btn btn-large">Calculate</button>
+      </div>
+    </div>
 
-    <span class="lead">hours at night</span>
-  </p>
-    
-    <button type="submit" class="btn btn-large center">Submit</button>
+    <div id="nap" class="submit_box">
+      <%= select_tag(:nap_amt, options_for_select((0..6)), :class => "span1") %>
+      <span class="space"></span>
+      naps per day.
+      <div class="submit_button_box">
+        <button type="submit" name="type" value="nap" class="btn btn-large">Calculate</button>
+      </div>
+    </div>
+  </div>
 <% end %>
 
-<%= link_to "What is this?", :action => "about" %>
+<div id="selector" class="centered">
+  Calculate by:
+  <span class="space"></span>
+  <%= link_to "Core Hours", "#core" %>
+  - <%= link_to "Total Daily Hours", "#daily" %>
+  - <%= link_to "# of Naps", "#nap" %>
+  <i class="icon-question-sign icon-white"></i>
+</div>
