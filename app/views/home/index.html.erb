@@ -1,6 +1,6 @@
 <%= form_tag("/calculate", :method => "get") do %>
   <p class="lead">I want my core sleep at</p>
-  <%= select_tag(:hr, options_for_select((1..12), 9), :class => "span1") %>
+  <%= select_tag(:h, options_for_select((1..12), 9), :class => "span1") %>
 
   <span class="lead">:</span>
 
@@ -48,7 +48,7 @@
 <div id="selector" class="centered">
   Calculate by:
   <span class="space"></span>
-  <%= link_to "Total Daily Hours", "#daily" %>
+  <%= link_to "Daily Sleep Hours", "#daily" %>
   - <%= link_to "Core Sleep Length", "#core" %>
   - <%= link_to "# of Naps", "#nap" %>
 </div>
