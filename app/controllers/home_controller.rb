@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
 
   def result 
+    # Array of sleep time and length pairs.
+    @sleep_times = []
+
     if params[:type] == "core"
       @status = "core"
     elsif params[:type] == "daily"
@@ -11,8 +14,8 @@ class HomeController < ApplicationController
       @error = true
     end
 
-    # Trim unused parameters
-    
+    # Trim unused parameters.
+
   end
 
 end
