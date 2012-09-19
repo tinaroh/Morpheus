@@ -8,7 +8,8 @@ class HomeController < ApplicationController
       :h => params[:h],
       :m => params[:m],
       :mr => params[:mr],
-      :type => params[:type]
+      :type => params[:type],
+      :utf8 => params[:utf8]
     }
 
     redirect_to new_params
