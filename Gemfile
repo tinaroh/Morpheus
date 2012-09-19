@@ -7,6 +7,7 @@ gem 'bootstrap-sass', '2.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'thin'
 #gem 'sqlite3'
 
 
