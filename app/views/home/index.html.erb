@@ -1,0 +1,49 @@
+
+<p>I want to select by the number of naps.</p>
+
+<form>
+  <p class="lead">I want to sleep at</p>
+
+  <select id="select_hour" class="span1">
+    <% for i in 1..12 %>
+      <option><%= i %></option>
+    <% end %>
+  </select>
+
+  <span class="lead">:</span>
+
+  <select id="select_minute" class="span1">
+    <% for i in "01".."59" %>
+      <option><%= i %></option>
+    <% end %>
+  </select>
+
+  <select id="select_meridiem" class="span1">
+    <option>AM</option>
+    <option>PM</option>
+  </select>
+
+  <p class="lead">with</p>
+
+<p>
+  <select class="span1">
+    <% for i in 1..24 %>
+      <option><%= i %></option>
+    <% end %>
+  </select>
+
+  <span class="lead">hours</span>
+
+  <select id="select_type" class="span2">
+    <option>at night</option>
+    <option>in total daily</option>
+  </select>
+
+  <span class="lead">.</span>
+</p>
+  
+  <p>
+    <button type="submit" class="btn btn-large">Submit</button>
+  </p>
+</form>
+    <%= link_to "What is this?", :action => "about" %>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Morpheus</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="main_layout" class="center">
+  <div id="main_header">
+    <h4>
+      <span id="main_logo"><%= link_to image_tag("morpheus-logo.png", alt: "Morpheus"), :action => "index" %></span>
+      - a polyphasic sleep planner
+    </h4>
+  </div>
+
+  <div id="main_content">
+    <%= yield %>
+  </div>
+
+  <div id="main_footer">
+    <p>
+      <%= link_to_unless_current "Home", :action => "index" %>
+      - <%= link_to_unless_current "About", :action => "about" %>
+      - <%= link_to_unless_current "Terms of Use", :action => "terms" %>
+    </p>
+    <p><small>by <%= mail_to "tinaroh@gmail.com", "Tina Roh", :encode => "javascript" %></small></p>
+  </div>
+</div>
+
+</body>
+</html>
