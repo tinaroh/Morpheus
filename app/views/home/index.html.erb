@@ -4,7 +4,7 @@
 
   <span class="lead">:</span>
 
-  <%= select_tag(:minute, options_for_select(("01".."59")), :class => "span1") %>
+  <%= select_tag(:minute, options_for_select(("00".."59")), :class => "span1") %>
 
   <select id="select_meridiem" name="mr" class="span1">
     <option>AM</option>
@@ -49,5 +49,4 @@
   <%= link_to "Core Hours", "#core" %>
   - <%= link_to "Total Daily Hours", "#daily" %>
   - <%= link_to "# of Naps", "#nap" %>
-  <i class="icon-question-sign icon-white"></i>
 </div>
