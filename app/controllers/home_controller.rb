@@ -16,9 +16,12 @@ class HomeController < ApplicationController
 
   def result 
     # Check that all parameters are valid before calculating.
+    #phase_params = Param.new(params)
+    #if not phase_params.valid?
+    #  return
+    #end
 
-
-    @phases = ["sup"]
+    @phases = []
 
     # Search database for fit.
 
