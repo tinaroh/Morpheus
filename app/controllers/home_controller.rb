@@ -22,17 +22,23 @@ class HomeController < ApplicationController
     end
 
     # Search database for fit.
-    @phases = Phase.all
-
-    # Populate statistics
-
-
-    # Convert h/m/mr to a valid date time.
-
-
-    # Array of sleep times and length pairs.
-    @sleep_times = [["hehe", 10]]
-
+    if phase_params.type == "daily"
+      min = phase_params.amt.to_i * 60
+      @phases = Phase.find(:all, :conditions => ["daily_length between ? and ?", min-30, min+30])
+      if @phases.empty?
+        # Establish bigger threshold
+        @phases = Phase.find(:all, :conditions => ["daily_length between ? and ?", min-40, min+40])
+      end
+    elsif phase_params.type == "core"
+      min = phase_params.amt.to_i * 60
+      @phases = Phase.find(:all, :conditions => ["core_length between ? and ?", min-30, min+30])
+      if @phases.empty?
+        # Establish bigger threshold
+        @phases = Phase.find(:all, :conditions => ["core_length between ? and ?", min-60, min+30])
+      end
+    elsif phase_params.type == "nap"
+      @phases = Phase.find_all_by_nap_count(phase_params.amt)
+    end
   end
 
 end

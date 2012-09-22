@@ -4,5 +4,7 @@
     Something went wrong. <%= link_to "Please try again.", :action => "index" %>
   </p>
 <% else %>
-
+  <% for phase in @phases %>
+    <%= render :partial => "phase", :object => phase %>
+  <% end %>
 <% end %>

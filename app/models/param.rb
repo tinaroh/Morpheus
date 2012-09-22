@@ -18,19 +18,19 @@ class Param
   validate :within_range
 
   def initialize(attributes = {})
-    @attributes = attributes
-  end
-  
-  def read_attribute_for_validation(key)
-    @attributes[key]
+    @amt = attributes[:amt]
+    @h = attributes[:h]
+    @m = attributes[:m]
+    @mr = attributes[:mr]
+    @type = attributes[:type]
   end
 
   def within_range
     # Check range of hours and minutes.
-    if not ("1".."12").include?(@attributes[:h])
+    if not ("1".."12").include?(@h)
       errors.add(:h, "is not a valid hour.")
     end 
-    if not ("00".."59").include?(@attributes[:m])
+    if not ("00".."59").include?(@m)
       errors.add(:m, "is not a valid minute time.")
     end 
 
@@ -40,8 +40,8 @@ class Param
   end
 
   def amount_out_of_range
-    amt = @attributes[:amt]
-    type = @attributes[:type]
+    amt =  @amt
+    type = @type
 
     if type == "daily" and not ("2".."8").include?(amt)
       return true

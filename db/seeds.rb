@@ -13,7 +13,8 @@ Phase.create(
   daily_length: 480,
   nap_count:    0,
   nap_interval: 0,
-  nap_length:   0
+  nap_length:   0,
+  desc: 'Monophasic sleep, 8 hours core'
 )
 
 Phase.create(
@@ -23,7 +24,8 @@ Phase.create(
   daily_length: 380,
   nap_count:    1,
   nap_interval: 530,
-  nap_length:   20
+  nap_length:   20,
+  desc: '1 nap Biphasic sleep, 20 minute nap'
 )
 
 Phase.create(
@@ -33,7 +35,8 @@ Phase.create(
   daily_length: 360,
   nap_count:    1,
   nap_interval: 575,
-  nap_length:   90
+  nap_length:   90,
+  desc: '1 nap Biphasic sleep, 90 minute nap'
 )
 
 Phase.create(
@@ -43,7 +46,8 @@ Phase.create(
   daily_length: 310,
   nap_count:    2,
   nap_interval: 377,
-  nap_length:   20
+  nap_length:   20,
+  desc: '2 nap Everyman sleep'
 )
 
 Phase.create(
@@ -53,7 +57,8 @@ Phase.create(
   daily_length: 240,
   nap_count:    3,
   nap_interval: 300,
-  nap_length:   20
+  nap_length:   20,
+  desc: '3 nap Everyman sleep'
 )
 
 Phase.create(
@@ -63,7 +68,8 @@ Phase.create(
   daily_length: 170,
   nap_count:    4,
   nap_interval: 254,
-  nap_length:   20
+  nap_length:   20,
+  desc: '4 nap Everyman sleep'
 )
 
 Phase.create(
@@ -73,7 +79,8 @@ Phase.create(
   daily_length: 190,
   nap_count:    5,
   nap_interval: 208,
-  nap_length:   20
+  nap_length:   20,
+  desc: '5 nap Everyman sleep'
 )
 
 Phase.create(
@@ -83,7 +90,8 @@ Phase.create(
   daily_length: 120,
   nap_count:    4,
   nap_interval: 360,
-  nap_length:   30
+  nap_length:   30,
+  desc: 'DYMAXIONIONION'
 )
 
 Phase.create(
@@ -93,5 +101,6 @@ Phase.create(
   daily_length: 120,
   nap_count:    6,
   nap_interval: 240,
-  nap_length:   20
+  nap_length:   20,
+  desc: 'Uberman the uber uber.'
 )
