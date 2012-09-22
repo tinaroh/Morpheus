@@ -4,5 +4,12 @@
     Something went wrong. <%= link_to "Please try again.", :action => "index" %>
   </p>
 <% else %>
-
+  <h3 class="sub_header">Sup</h3>
+  <% if @phases.empty? %>
+    EMPTY ALL
+  <% end %>
+  
+  <% for phase in @phases %>
+    <p><%= phase.name %></p>
+  <% end %>
 <% end %>

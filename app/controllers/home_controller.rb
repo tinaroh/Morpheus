@@ -21,10 +21,8 @@ class HomeController < ApplicationController
       return
     end
 
-    @phases = []
-
     # Search database for fit.
-
+    @phases = Phase.all
 
     # Populate statistics
 
