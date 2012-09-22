@@ -26,6 +26,6 @@
 
 # Postgres
 development:
-  adapter: postgresql
+  adapter:  postgresql
   database: db/development
-  host: localhost
+  host:     localhost
