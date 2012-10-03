@@ -4,6 +4,18 @@
     Something went wrong. <%= link_to "Please try again.", :action => "index" %>
   </p>
 <% else %>
+  <% if @phases.length == 1 %>
+    Your most suitable cycle is
+  <% else %>
+    Your most suitable cycle is 
+    <%= link_to @phases.first.name, "#result_#{@phases.first.id}" %>
+    <% @phases[1..-1].each do |phase| %>
+      or 
+      <%= link_to phase.name, "#result_#{phase.id}}" %>
+    <% end %>
+    .
+  <% end %>
+
   <% for phase in @phases %>
     <%= render :partial => "phase", :object => phase %>
   <% end %>
