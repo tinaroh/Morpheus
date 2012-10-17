@@ -1,20 +1,22 @@
+<% content_for :head, javascript_include_tag("jquery.js", "chart.js") %>
+
 <% if not @phases %>
   <h3 class="sub_header">Oops.</h3>
   <p class="sub_text">
     Something went wrong. <%= link_to "Please try again.", :action => "index" %>
   </p>
 <% else %>
-  <% if @phases.length == 1 %>
-    Your most suitable cycle is
-  <% else %>
-    Your most suitable cycle is 
+  Your most suitable cycle is
+  <% if @phases.length > 1 %>
     <%= link_to @phases.first.name, "#result_#{@phases.first.id}" %>
     <% @phases[1..-1].each do |phase| %>
       or 
-      <%= link_to phase.name, "#result_#{phase.id}}" %>
+      <%= link_to phase.name, "#result_#{phase.id}" %>
     <% end %>
     .
   <% end %>
+
+  <div id="chart_div"></div>
 
   <% for phase in @phases %>
     <%= render :partial => "phase", :object => phase %>
