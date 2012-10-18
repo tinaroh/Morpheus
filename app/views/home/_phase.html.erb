@@ -2,13 +2,21 @@
   <h3 class="sub_header"><%= phase.name %></h3>
 
   <p class="sub_text result_stats">
+    Difficulty:
+    <% (1..phase.level).each do |i| %>
+      <i class="icon-star icon-white difficulty"></i>
+    <% end %>
+    <% (phase.level..4).each do |i| %>
+      <i class="icon-star difficulty"></i>
+    <% end %>
+    <br />
     Daily Sleep: <strong><%= phase.get_daily_sleep() %></strong> hours<br />
     Core Sleep Length: <strong><%= phase.get_core_sleep_length() %></strong> hours<br />
     # of Naps: <strong><%= phase.nap_count %></strong>
   </p>
 
   <p class="sub_text result_desc">
-    <%= phase.desc %>
+    <%= phase.desc.html_safe %>
   </p>
 
   <div class="result_sched">

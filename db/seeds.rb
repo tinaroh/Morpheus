@@ -55,7 +55,9 @@ Phase.create(
   nap_count:    2,
   nap_interval: 377,
   nap_length:   20,
-  desc: '2 nap Everyman sleep'
+  desc: 'The Everyman consists of taking multiple carefully planned naps throughout the day. It
+    has multiple variations. With more naps, the hours awake per day increases. This variation
+    consists of two naps and allows more flexibility in deviating from the sleep schedule.'
 )
 
 Phase.create(
@@ -66,7 +68,10 @@ Phase.create(
   nap_count:    3,
   nap_interval: 300,
   nap_length:   20,
-  desc: '3 nap Everyman sleep'
+  desc: 'The Everyman consists of taking multiple carefully planned naps throughout the day. It
+    has multiple variations. With more naps, the hours awake per day increases. This variation
+    consists of three naps and is considered of middle difficulty among the polyphasic sleep
+    schedules.'
 )
 
 Phase.create(
@@ -77,7 +82,9 @@ Phase.create(
   nap_count:    4,
   nap_interval: 254,
   nap_length:   20,
-  desc: '4 nap Everyman sleep'
+  desc: 'The Everyman consists of taking multiple carefully planned naps throughout the day. It
+    has multiple variations. With more naps, the hours awake per day increases. This variation
+    consists of four naps.'
 )
 
 Phase.create(
@@ -88,7 +95,10 @@ Phase.create(
   nap_count:    5,
   nap_interval: 208,
   nap_length:   20,
-  desc: '5 nap Everyman sleep'
+  desc: 'The Everyman consists of taking multiple carefully planned naps throughout the day. It
+    has multiple variations. With more naps, the hours awake per day increases. This variation
+    consists of five naps and is the hardest of the Everyman variations, requiring you to strictly
+    adhere to the sleep schedule.'
 )
 
 Phase.create(
@@ -99,8 +109,9 @@ Phase.create(
   nap_count:    4,
   nap_interval: 360,
   nap_length:   30,
-  desc: 'This sleep schedule is created by Richard Buckminster Fuller, who practiced it for two years
-    before stopping because of conflict with his colleagues\' monophasic schedules.'
+  desc: 'The Dymaxion sleep schedule was supposedly created by Richard Buckminster Fuller, who practiced it for two years
+    before stopping because of conflict with his colleagues\' monophasic schedules. It is the most extreme sleep schedule
+    after the Uberman, resulting in 22 hours of awake time.'
 )
 
 Phase.create(
@@ -111,8 +122,8 @@ Phase.create(
   nap_count:    6,
   nap_interval: 240,
   nap_length:   20,
-  desc: 'The Uberman sleep schedule is considered the most strict and rigorous of the polyphasic schedules.
-    Any deviation from the nap schedule in the beginning of adjusting can hinder your success. Your lifestyle
-    (work, children) must also allow for the strict schedule. Benefits reported by users are an extreme mental
-    clearness and overall healthier feeling. One can have as much as 21 hours of time awake.'
+  desc: 'The Uberman sleep schedule is considered the most strict and extreme of the polyphasic schedules due to
+    the frequency of the naps. Your lifestyle and daily schedule must also allow for the strict schedule. 
+    One popular anectdote can be found in the blog of 
+    <a href="http://www.stevepavlina.com/blog/2005/10/polyphasic-sleep/" target="_blank">Steve Pavlina</a>.'
 )

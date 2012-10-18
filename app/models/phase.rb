@@ -34,8 +34,8 @@ class Phase < ActiveRecord::Base
       # Iterate through sleep times.
   	 	while timer < target
   	 		if sleep
-  	 			timer += self.nap_length.minutes
   	  		times << Phase.get_time_range(timer, self.nap_length.minutes)
+          timer += self.nap_length.minutes
   	  	else
   	  		timer += self.nap_interval.minutes
   	  	end
