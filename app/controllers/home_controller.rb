@@ -21,19 +21,24 @@ class HomeController < ApplicationController
       return
     end
 
+    # Time parameters.
+    @h = phase_params.h
+    @m = phase_params.m
+    @mr = phase_params.mr
+
     # Search database for fit.
     if phase_params.type == "daily"
       min = phase_params.amt.to_i * 60
       @phases = Phase.find(:all, :conditions => ["daily_length between ? and ?", min-30, min+30])
       if @phases.empty?
-        # Establish bigger threshold
+        # Establish bigger threshold.
         @phases = Phase.find(:all, :conditions => ["daily_length between ? and ?", min-40, min+40])
       end
     elsif phase_params.type == "core"
       min = phase_params.amt.to_i * 60
       @phases = Phase.find(:all, :conditions => ["core_length between ? and ?", min-30, min+30])
       if @phases.empty?
-        # Establish bigger threshold
+        # Establish bigger threshold.
         @phases = Phase.find(:all, :conditions => ["core_length between ? and ?", min-60, min+30])
       end
     elsif phase_params.type == "nap"

@@ -14,9 +14,7 @@
     .
   <% end %>
 
-  <div id="chart_div"></div>
-
   <% for phase in @phases %>
-    <%= render :partial => "phase", :object => phase %>
+    <%= render :partial => "phase", :object => phase, :locals => {:h => @h, :m => @m, :mr => @mr} %>
   <% end %>
 <% end %>

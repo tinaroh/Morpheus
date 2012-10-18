@@ -14,11 +14,10 @@ Phase.create(
   nap_count:    0,
   nap_interval: 0,
   nap_length:   0,
-  desc: 'If you\'d like to sleep 8 or more hours for your core sleep or have no naps during the day,
+  desc: 'If you\'d like to sleep around 8 or more hours for your core sleep or have no naps during the day,
     it is recommended that you sleep the traditional monophasic way. The quality of your sleep depends
     on the number of complete sleep cycles you receive, which is about 90 minutes in the average person.
-    Try to wake up at the end of a cycle to feel more rested.
-    <small>(Reference: <%= link_to "Lifehack", "//lifehack.org/articles/lifehack/90-minutes-sleep-cycle.html", :target => "blank_" %>)</small>'
+    Try to wake up at the end of a cycle to feel more rested.'
 )
 
 Phase.create(

@@ -17,5 +17,33 @@
 }
 
 .result_sched {
-  
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #D1CEDB;
+  margin: auto;
+  padding: 15px;
+  text-shadow: none;
+}
+
+.sched_tb_title {
+  color: #b578ae;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.sched_tb_subtitle {
+  color: #353438;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.sched_tb_time td {
+  color: #353438;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 5px 13px;
 }

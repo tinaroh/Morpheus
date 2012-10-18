@@ -2,8 +2,8 @@
   <h3 class="sub_header"><%= phase.name %></h3>
 
   <p class="sub_text result_stats">
-    Daily Sleep Hours: <strong><%= (phase.daily_length / 60.0).round(1) %></strong><br />
-    Core Sleep Length: <strong><%= (phase.core_length / 60.0).round(1) %></strong><br />
+    Daily Sleep: <strong><%= phase.get_daily_sleep() %></strong> hours<br />
+    Core Sleep Length: <strong><%= phase.get_core_sleep_length() %></strong> hours<br />
     # of Naps: <strong><%= phase.nap_count %></strong>
   </p>
 
@@ -11,10 +11,14 @@
     <%= phase.desc %>
   </p>
 
-  <h4 class="sub_header">Daily Sleep Schedule</h4>
-  <table class="result_sched">
-    <tr><td>Time</td><td>Length</td></tr>
-    
-  </table>
+  <div class="result_sched">
+    <h4 class="sched_tb_title">Daily Sleep Schedule</h4>
+    <table class="centered">
+      <tr class="sched_tb_subtitle"><td>Sleep At</td><td>Until</td></tr>
+      <% for sleep, wake in phase.get_sleep_times(@h.to_i, @m.to_i, @mr) %>
+        <tr class="sched_tb_time"><td><%= sleep %></td><td><%= wake %></td></tr>
+      <% end %>
+    </table>
+  </div>
   <hr />
 </div>
