@@ -47,20 +47,12 @@ class Phase < ActiveRecord::Base
   end
 
   def get_daily_sleep
-    if self.nap_count != 0
-      return (self.daily_length / 60.0).round(1)
-    else
-      return "7.5 or 9.0"
-    end
+    return (self.daily_length / 60.0).round(1)
   end
 
 
   def get_core_sleep_length
-    if self.nap_count != 0
-      return (self.core_length / 60.0).round(1)
-    else
-      return "7.5 or 9.0"
-    end
+    return (self.core_length / 60.0).round(1)
   end
 
 end

@@ -17,7 +17,9 @@ Phase.create(
   desc: 'If you\'d like to sleep around 8 or more hours for your core sleep or have no naps during the day,
     it is recommended that you sleep the traditional monophasic way. The quality of your sleep depends
     on the number of complete sleep cycles you receive, which is about 90 minutes in the average person.
-    Try to wake up at the end of a cycle to feel more rested.'
+    Try to wake up at the end of a cycle to feel more rested. <small>(Reference:
+    <a href="//lifehack.org/articles/lifehack/90-minutes-sleep-cycle.html" target="_blank">Lifehack</a>)</small>
+ '
 )
 
 Phase.create(
@@ -125,5 +127,5 @@ Phase.create(
   desc: 'The Uberman sleep schedule is considered the most strict and extreme of the polyphasic schedules due to
     the frequency of the naps. Your lifestyle and daily schedule must also allow for the strict schedule. 
     One popular anectdote can be found in the blog of 
-    <a href="http://www.stevepavlina.com/blog/2005/10/polyphasic-sleep/" target="_blank">Steve Pavlina</a>.'
+    <a href="//www.stevepavlina.com/blog/2005/10/polyphasic-sleep/" target="_blank">Steve Pavlina</a>.'
 )
