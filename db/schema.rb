@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20120914065334) do
 
   create_table "phases", :force => true do |t|
     t.string   "name"
+    t.string   "code"
     t.text     "desc"
     t.integer  "level"
     t.integer  "core_length"

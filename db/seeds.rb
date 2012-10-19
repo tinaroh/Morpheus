@@ -8,6 +8,7 @@
 
 Phase.create(
   name:         'Monophasic',
+  code:         'mono',
   level:        0,
   core_length:  480, 
   daily_length: 480,
@@ -24,6 +25,7 @@ Phase.create(
 
 Phase.create(
   name:         'Biphasic (20-min nap)',
+  code:         'bi20',
   level:        2,
   core_length:  360, 
   daily_length: 380,
@@ -38,6 +40,7 @@ Phase.create(
 
 Phase.create(
   name:         'Biphasic (90-min nap)',
+  code:         'bi90',
   level:        1,
   core_length:  270, 
   daily_length: 360,
@@ -51,6 +54,7 @@ Phase.create(
 
 Phase.create(
   name:         'Everyman (2 naps)',
+  code:         'every2',
   level:        3,
   core_length:  270, 
   daily_length: 310,
@@ -64,6 +68,7 @@ Phase.create(
 
 Phase.create(
   name:         'Everyman (3 naps)',
+  code:         'every3',
   level:        3,
   core_length:  180, 
   daily_length: 240,
@@ -78,6 +83,7 @@ Phase.create(
 
 Phase.create(
   name:         'Everyman (4 naps)',
+  code:         'every4',
   level:        4,
   core_length:  90, 
   daily_length: 170,
@@ -91,6 +97,7 @@ Phase.create(
 
 Phase.create(
   name:         'Everyman (5 naps)',
+  code:         'every5',
   level:        4,
   core_length:  90, 
   daily_length: 190,
@@ -105,6 +112,7 @@ Phase.create(
 
 Phase.create(
   name:         'Dymaxion',
+  code:         'dyma',
   level:        5,
   core_length:  0, 
   daily_length: 120,
@@ -118,6 +126,7 @@ Phase.create(
 
 Phase.create(
   name:         'Uberman',
+  code:         'uber',
   level:        5,
   core_length:  0, 
   daily_length: 120,

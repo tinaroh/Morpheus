@@ -8,7 +8,8 @@ class HomeController < ApplicationController
       :h => params[:h],
       :m => params[:m],
       :mr => params[:mr],
-      :type => params[:type]
+      :type => params[:type],
+      :opt => params[:opt]
     }
 
     redirect_to new_params
@@ -25,6 +26,10 @@ class HomeController < ApplicationController
     @h = phase_params.h
     @m = phase_params.m
     @mr = phase_params.mr
+
+    # If the optional phase is defined, grab only that phase if it is valid.
+    @phases = Phase.find_all_by_code(params[:opt])
+    if not @phases.empty? then return end
 
     # Search database for fit.
     if phase_params.type == "daily"
