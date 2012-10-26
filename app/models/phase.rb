@@ -10,17 +10,21 @@ class Phase < ActiveRecord::Base
   def get_sleep_times(h, m, mr, format=true)
   	times = []
 
-  	# Adjust meridian.
-  	if mr == "PM" then h += 12 end
+  # Set up timer to count through sleep times.
+    timer = Time.new.midnight
+    if h != 12
+      timer += h.hours
+    end
 
-  	# Set up timer to count through sleep times.
-  	timer = Time.new.midnight
-  	timer += h.hours + m.minutes
+  	# Adjust meridian.
+  	if mr == "PM" then timer += 12.hours end
+
+  	timer += m.minutes
 
   	if self.nap_count == 0
       times << Phase.get_time_range(timer, self.core_length.minutes)
   	else 
-  		target = timer + 24.hours
+  		target = timer + 1.day
 
       sleep = true
 
