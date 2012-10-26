@@ -14,10 +14,10 @@ class Phase < ActiveRecord::Base
     timer = Time.new.midnight
     if h != 12
       timer += h.hours
-    end
 
-  	# Adjust meridian.
-  	if mr == "PM" then timer += 12.hours end
+      # Adjust meridian.
+      if mr == "PM" then timer += 12.hours end
+    end
 
   	timer += m.minutes
 
@@ -36,7 +36,7 @@ class Phase < ActiveRecord::Base
       end 
 
       # Iterate through sleep times.
-  	 	while timer < target
+  	 	while timer + self.nap_length.minutes < target
   	 		if sleep
   	  		times << Phase.get_time_range(timer, self.nap_length.minutes)
           timer += self.nap_length.minutes
